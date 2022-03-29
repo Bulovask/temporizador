@@ -1,8 +1,13 @@
+/*Ageu*/
 body {
 	background-color: white;
 }
 
 #display-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 80vmin min-content;
+	align-content: center;
 	width: 100vw;
 	height: 100vh;
 }
@@ -10,13 +15,13 @@ body {
 #display-timer {
 	position: relative;
 	border: 1px solid black;
+	border-radius: 100%;
 	width: 80vmin;
 	height: 80vmin;
 	margin: auto;
 }
 
 #display-timer :is(canvas, span)  {
-	outline: 1px solid black;
 	width: 100%;
 	height: 100%;
 }
@@ -38,4 +43,29 @@ body {
 	display: flex;
 	justify-content: center;
 	gap: 10px;
+}
+
+#display-controls button {
+	font-size: 2rem;
+}
+
+/*Bruno Luna*/
+#keyboard-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#keyboard {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .4rem;
+}
+
+.number{
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    padding: 1.2rem;
+    font-size: 32px;
 }
