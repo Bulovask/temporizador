@@ -1,8 +1,12 @@
-/*Ageu*/
+@font-face {
+	font-family: display;
+	src: url('ShareTechMono-Regular.ttf');
+}
 body {
 	background-color: white;
 }
 
+/*Ageu*/
 #display-container {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -33,7 +37,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 2rem;
+	font-size: 3rem;
+	font-family: display;
+	user-select: none;
 }
 
 #display-controls {
@@ -46,7 +52,27 @@ body {
 }
 
 #display-controls button {
-	font-size: 2rem;
+	width: 3rem;
+	height: 3rem;
+	background-size: 100% 100%;
+	background-color: transparent;
+	border: none;
+}
+
+#display-controls button:active {
+	filter: opacity(0.5) drop-shadow(0 0 0 yellow);
+}
+
+.play-icon {
+	background-image: url("/images/play.svg");
+}
+
+.pause-icon {
+	background-image: url("/images/pause.svg");
+}
+
+.stop-icon {
+	background-image: url("/images/stop.svg");
 }
 
 /*Bruno Luna*/
