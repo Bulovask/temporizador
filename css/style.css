@@ -77,10 +77,27 @@ body {
 
 /*Bruno Luna*/
 #keyboard-container{
-    height: 100vh;
+    height: 60vh;
+	width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+	flex-direction: column;
+	gap: .6rem;
+}
+
+#img-clean{
+	position: relative;
+	top: 5px;
+	left: 45px;
+}
+
+.display-numbers-keyboard{
+	width: 99em;
+	border: 1.2px solid hsl(0, 0%, 0%);
+	border-radius: 6px;
+	text-align: center;
+	padding: .3rem 3rem;
 }
 
 #keyboard {
