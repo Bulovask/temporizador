@@ -75,6 +75,9 @@ body {
 	background-image: url("/images/stop.svg");
 }
 
+.edit-icon {
+	background-image: url("/images/edit.svg");
+}
 /*Bruno Luna*/
 #keyboard-container{
     height: 100vh;
