@@ -10,37 +10,37 @@
 		<script src="js/script.js" defer></script>
 	</head>
 	<body>
-		<section id="display-container">
+		<section id="display-container" class="container">
 			<div id="display-timer">
 				<canvas></canvas>
-				<span>00:00:00</span>
+				<span id="main-display">00:00:00</span>
 			</div>
 			<div id="display-controls">
-				<button type="button" class="edit-icon" onclick=""></button>
-				<button type="button" class="stop-icon" onclick=""></button>
-				<button type="button" class="play-icon" onclick=""></button>
+				<button type="button" class="icon edit-icon" onclick=""></button>
+				<button type="button" class="icon stop-icon" onclick=""></button>
+				<button type="button" class="icon play-icon" onclick=""></button>
 			</div>
 		</section>
-		<section id="keyboard-container">
-			<div class="display-btn-numbers">
-				<span class="display-numbers-keyboard">00:00:00
-					<img src="images/clean.svg" id="img-clean" width="20px" alt="">
-				</span>
-			</div>
-					
-			<div id="keyboard">
-				<span class="number">1</span>
-				<span class="number">2</span>
-				<span class="number">3</span>
-				<span class="number">4</span>
-				<span class="number">5</span>
-				<span class="number">6</span>
-				<span class="number">7</span>
-				<span class="number">8</span>
-				<span class="number">9</span>
-				<span></span>
-				<span class="number">0</span>
-				<span></span>
+		<section id="keyboard-container" class="container">
+			<div class="small">
+				<div class="secondary-display-container">
+					<span id="secondary-display">00:00:00</span>
+					<button type="button" class="icon clean-icon"></button>
+				</div>
+				<div id="keyboard">
+					<span class="number">1</span>
+					<span class="number">2</span>
+					<span class="number">3</span>
+					<span class="number">4</span>
+					<span class="number">5</span>
+					<span class="number">6</span>
+					<span class="number">7</span>
+					<span class="number">8</span>
+					<span class="number">9</span>
+					<span></span>
+					<span class="number">0</span>
+					<span></span>
+				</div>
 			</div>
 		</section>
 	</body>
