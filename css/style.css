@@ -66,23 +66,23 @@ body {
 }
 
 .play-icon {
-	background-image: url("/images/play.svg");
+	background-image: url("../images/play.svg");
 }
 
 .pause-icon {
-	background-image: url("/images/pause.svg");
+	background-image: url("../images/pause.svg");
 }
 
 .stop-icon {
-	background-image: url("/images/stop.svg");
+	background-image: url("../images/stop.svg");
 }
 
 .edit-icon {
-	background-image: url("/images/edit.svg");
+	background-image: url("../images/edit.svg");
 }
 
 .clean-icon {
-	background-image: url("/images/clean.svg");
+	background-image: url("../images/clean.svg");
 }
 
 
