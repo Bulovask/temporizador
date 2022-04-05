@@ -15,7 +15,7 @@ body {
 }
 
 #display-container {
-	display: none; /*grid*/
+	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 80vmin min-content;
 	align-content: center;
@@ -73,8 +73,8 @@ body {
 	background-image: url("../images/pause.svg");
 }
 
-.stop-icon {
-	background-image: url("../images/stop.svg");
+.reset-icon {
+	background-image: url("../images/reset.svg");
 }
 
 .edit-icon {
@@ -87,7 +87,7 @@ body {
 
 
 #keyboard-container{
-    display: flex;
+    display: none; /*flex*/;
     justify-content: center;
     align-items: center;
 	flex-direction: column;

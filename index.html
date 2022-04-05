@@ -17,8 +17,8 @@
 			</div>
 			<div id="display-controls">
 				<button type="button" class="icon edit-icon" onclick=""></button>
-				<button type="button" class="icon stop-icon" onclick=""></button>
-				<button type="button" class="icon play-icon" onclick=""></button>
+				<button type="button" class="icon reset-icon" onclick="reset()"></button>
+				<button type="button" class="icon play-icon" onclick="toggle()"></button>
 			</div>
 		</section>
 		<section id="keyboard-container" class="container">
@@ -43,5 +43,25 @@
 				</div>
 			</div>
 		</section>
+		
+		
+		<button style="font-size: 32px; position: fixed;" onclick="alternar()">alternar</button>
+		<script defer>
+			const d = document.querySelector("#display-container")
+			const k = document.querySelector("#keyboard-container")
+			s = true
+			
+			function alternar() {
+				s = !s
+				if(s) {
+					d.style.display = "grid"
+					k.style.display = "none"
+				}
+				else {
+					d.style.display = "none"
+					k.style.display = "flex"
+				}
+			}
+		</script>
 	</body>
 </html>
