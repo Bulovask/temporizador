@@ -1,5 +1,6 @@
 const mainDisplay = document.getElementById("main-display");
 
+let definiteTimeMS = 60 * 1000;
 let running = false;
 let lastTimeMS = 0;
 let elapsedTimeMS = 0;
@@ -14,18 +15,22 @@ function loop() {
 	}
 }
 
+function getRemainingTime() {
+	return definiteTimeMS - elapsedTimeMS;
+}
+
 function updateDisplay() {
 	//mainDisplay
 	function format(n, f = 2) {
 		return ("0".repeat(f - 1) + String(n) % 100).substr(-f, f);
 	}
-	const timeMS = elapsedTimeMS;
-	const h = (Math.trunc(timeMS / 3600000));
-	const m = format(Math.trunc(timeMS / 60000) % 60);
-	const s = format(Math.trunc(timeMS / 1000) % 60);
-	const ms = format(Math.trunc(timeMS / 10) % 100);
+	const timeMS = getRemainingTime();
+	const h = Math.abs(Math.trunc(timeMS / 3600000));
+	const m = format(Math.abs(Math.trunc(timeMS / 60000) % 60));
+	const s = format(Math.abs(Math.trunc(timeMS / 1000) % 60));
+	const ms = format(Math.abs(Math.trunc(timeMS / 10) % 100));
 	
-	mainDisplay.innerText = `${h}:${m}:${s}:${ms}`;
+	mainDisplay.innerHTML = `${h}:${m}:${s}:${ms}`;
 }
 
 function start() {
@@ -38,13 +43,13 @@ function pause() {
 	running = false;
 }
 
-function toggle() {
-	if(running) pause();
-	else start();
-}
-
 function reset() {
 	pause();
 	elapsedTimeMS = 0;
 	updateDisplay();
+}
+
+function toggle() {
+	if(running) pause();
+	else start();
 }
