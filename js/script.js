@@ -53,3 +53,99 @@ function toggle() {
 	if(running) pause();
 	else start();
 }
+
+const display_keyboard = document.querySelector("#secondary-display")
+let flagReady = true
+const num_one = document.querySelector("#one")
+const num_two = document.querySelector("#two")
+const num_three = document.querySelector("#three")
+const num_four = document.querySelector("#four")
+const num_five = document.querySelector("#five")
+const num_six = document.querySelector("#six")
+const num_seven = document.querySelector("#seven")
+const num_eight = document.querySelector("#eight")
+const num_nine = document.querySelector("#nine")
+const num_zero = document.querySelector("#zero")
+
+num_one.addEventListener("click", function(e){
+
+	e.preventDefault();
+
+	const value_one = 1
+	display_keyboard.textContent += value_one
+});
+
+num_two.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_two = 2
+	display_keyboard.textContent += value_two
+});
+
+num_three.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_three = 3
+	display_keyboard.textContent += value_three
+});
+
+num_four.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_four = 4
+	display_keyboard.textContent += value_four
+});
+
+num_five.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_five = 5
+	display_keyboard.textContent += value_five
+});
+
+num_six.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_six = 6
+	display_keyboard.textContent += value_six
+});
+
+num_seven.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_seven = 7
+	display_keyboard.textContent += value_seven
+});
+
+num_eight.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_eight = 8
+	display_keyboard.textContent += value_eight
+});
+
+num_nine.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_nine = 9
+	display_keyboard.textContent += value_nine
+});
+
+num_zero.addEventListener("click", function(e){
+	e.preventDefault();
+
+	const value_zero = 0
+	display_keyboard.textContent += value_zero
+});
+
+function ready(){
+	let btnReady = document.querySelector("#btn_ready")
+	if(flagReady){
+		btnReady.setAttribute("disabled", "")
+	}else if(flagReady){
+		btnReady.setAttribute("enabled", "")
+
+	}
+}
+
+ready()
