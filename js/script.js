@@ -2,9 +2,9 @@ const mainDisplay = document.getElementById("main-display");
 const buttonPlayPause = document.getElementById("playPause");
 
 let definiteTimeMS = 2 * 1000;
-let running = false;
 let lastTimeMS = 0;
 let elapsedTimeMS = 0;
+let running = false;
 let finished = false;
 
 function loop() {

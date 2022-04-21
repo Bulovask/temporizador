@@ -6,6 +6,7 @@
 - running
 - lastTimeMS
 - elapsedTimeMS
+- finished
 
 **definiteTimeMS** guarda um número inteiro que representa o tempo escolhido pelo usuário em milissegundos.
 O usuário digitará no teclado por exemplo 1 minuto e 30 segundos, quando ele apertar em "pronto" será preciso ocorrer uma conversão de minutos e segundos para milissegundos e o resultado será atribuído à váriavel definiteTimeMS, será necessário esconder o #keyboard-container e exibir o #display-container.
@@ -15,6 +16,8 @@ O usuário digitará no teclado por exemplo 1 minuto e 30 segundos, quando ele a
 **lastTimeMS** guarda a data do frame anterior em milissegundos, pois o cálculo do tempo decorrido é realizado fazendo a diferença entre a data atual e a data do frame anterior: `Date.now() - lastTimeMS`
 
 **elapsedTimeMS** guarda quanto tempo já se passou, a cada atualização de frame a função loop faz o cálculo do tempo decorrido desde a última atualização e soma o resultado a `elapsedTimeMS += Date.now() - lastTimeMS`
+
+**finished** guarda o valor em boleano que informa se a contagem já terminou, valor padrão false, quando o tempo esgota finished passa a ser true.
 
 
 ## funções
@@ -43,4 +46,4 @@ O usuário digitará no teclado por exemplo 1 minuto e 30 segundos, quando ele a
 
 **reset** chama pause, zera o elapsedTimeMS, e atualiza o display
 
-**toggle** se running == true, chama pause, se não, chama start
+**toggle** se running == true, chama pause, se não, chama start.
