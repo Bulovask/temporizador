@@ -1,9 +1,11 @@
 const mainDisplay = document.getElementById("main-display");
+const buttonPlayPause = document.getElementById("playPause");
 
-let definiteTimeMS = 60 * 1000;
+let definiteTimeMS = 2 * 1000;
 let running = false;
 let lastTimeMS = 0;
 let elapsedTimeMS = 0;
+let finished = false;
 
 function loop() {
 	if(running) {
@@ -12,6 +14,11 @@ function loop() {
 		lastTimeMS = now;
 		requestAnimationFrame(loop);
 		updateDisplay();
+		
+		if(getRemainingTime() <= 0 && !finished) {
+			finished = false;
+			mainDisplay.style.color = "red";
+		}
 	}
 }
 
@@ -33,25 +40,36 @@ function updateDisplay() {
 	mainDisplay.innerHTML = `${h}:${m}:${s}:${ms}`;
 }
 
-function start() {
+updateDisplay();
+
+function start(buttonHTML) {
 	running = true;
+	buttonHTML.classList.add("pause-icon");
+	buttonHTML.classList.remove("play-icon");
 	lastTimeMS = Date.now();
 	loop();
 }
 
-function pause() {
+function pause(buttonHTML) {
 	running = false;
+	buttonHTML.classList.add("play-icon");
+	buttonHTML.classList.remove("pause-icon");
 }
 
 function reset() {
-	pause();
+	pause(buttonPlayPause);
 	elapsedTimeMS = 0;
 	updateDisplay();
+	mainDisplay.style.color = "black";
 }
 
 function toggle() {
-	if(running) pause();
-	else start();
+	if(running) {
+		pause(buttonPlayPause);
+	}
+	else {
+		start(buttonPlayPause);
+	}
 }
 
 const display_keyboard = document.querySelector("#secondary-display")
