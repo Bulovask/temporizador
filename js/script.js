@@ -1,7 +1,7 @@
 const mainDisplay = document.getElementById("main-display");
 const buttonPlayPause = document.getElementById("playPause");
 
-let definiteTimeMS = 2 * 1000;
+let definiteTimeMS = 10 * 1000;
 let lastTimeMS = 0;
 let elapsedTimeMS = 0;
 let running = false;

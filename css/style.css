@@ -87,6 +87,7 @@ body {
 
 
 #keyboard-container{
+	position: relative;
     display: none; /*flex*/;
     justify-content: center;
     align-items: center;
@@ -106,19 +107,22 @@ body {
 
 .secondary-display-container {
 	display: flex;
-	width: auto;
+	width: 100%;
 	border: 1.2px solid hsl(0, 0%, 0%);
 	border-radius: 6px;
 	padding: 2.5px 5px;
-	margin-bottom: 2.5px;
+	margin: 0 .4rem 5px .4rem;
 	justify-content: space-between;
 	align-items: center;
+	overflow: scroll;
 }
 
 #keyboard {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: .4rem;
+    max-width: 60vw;
 }
 
 .number{
@@ -127,4 +131,5 @@ body {
     padding: 1.2rem;
     font-size: 32px;
 	cursor: pointer;
+	flex-grow: 0;
 }
